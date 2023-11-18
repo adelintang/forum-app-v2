@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Loading from './components/Loading';
 import Navigation from './components/Navigation';
 import AddThread from './pages/AddThread';
+import Detail from './pages/Detail';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 
@@ -57,6 +58,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/thread/add" element={<AddThread />} />
+            <Route path="/thread/:id" element={<Detail />} />
           </Routes>
         </main>
         <footer>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaReply } from 'react-icons/fa';
 import parser from 'html-react-parser';
 import postedAt from '../utils/postedAt';
+import UserCreated from './UserCreated';
 
 const Thread = ({ thread }) => {
   return (
@@ -21,10 +22,7 @@ const Thread = ({ thread }) => {
           <FaReply />
         </p>
         <p className="text-base text-[#888]">{postedAt(thread.createdAt)}</p>
-        <p className="text-base">
-          <span>Dibuat oleh </span>
-          <span className="font-semibold">{thread.user.name}</span>
-        </p>
+        <UserCreated avatar={thread.user.avatar} name={thread.user.name} createdText />
       </div>
     </div>
   );

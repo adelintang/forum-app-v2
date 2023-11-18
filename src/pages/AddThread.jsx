@@ -21,7 +21,7 @@ const AddThread = () => {
   };
 
   return (
-    <div className="w-[95%] sm:w-[90%] md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto">
+    <div className="w-[95%] sm:w-[90%] md:w-[75%] lg:w-[60%] mx-auto">
       <h2 className="mt-6 mb-4 text-lg font-semibold">Buat Threads Baru</h2>
       <form
         className="shadow rounded p-4 flex flex-col gap-y-3 bg-white"
