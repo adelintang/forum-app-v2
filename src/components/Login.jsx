@@ -34,7 +34,7 @@ const Login = ({ login }) => {
       <button
         type="submit"
         aria-label="login button"
-        className="rounded py-1.5 mt-4 font-medium bg-[#14213D] text-white"
+        className="rounded py-1.5 mt-4 font-medium bg-[#14213D] text-white hover:bg-blue-600"
       >
         Login
       </button>

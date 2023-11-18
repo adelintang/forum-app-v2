@@ -23,7 +23,7 @@ const Home = () => {
   }));
 
   return (
-    <section className="w-[95%] sm:w-[90%] md:w-[75%] lg:w-[60%] mx-auto py-6 text-[#14213D]">
+    <section className="w-[95%] sm:w-[90%] md:w-[75%] lg:w-[60%] mx-auto py-6 text-[#14213D] mb-14">
       <h2 className="text-lg font-semibold mb-3">Threads</h2>
       <Threads threads={threadsList} />
     </section>

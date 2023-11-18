@@ -6,6 +6,8 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import Home from './pages/Home';
 import Loading from './components/Loading';
+import Navigation from './components/Navigation';
+import AddThread from './pages/AddThread';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 
@@ -54,8 +56,12 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/thread/add" element={<AddThread />} />
           </Routes>
         </main>
+        <footer>
+          <Navigation />
+        </footer>
       </div>
     </>
   );
