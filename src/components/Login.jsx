@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
 
-const Login = () => {
+const Login = ({ login }) => {
   const [email, setEmail] = useInput('');
   const [password, setPassword] = useInput('');
   const inputStyles = 'bg-white px-3 py-1.5 rounded text-base outline-none border border-solid border-[#14213D] focus:ring-1 focus:ring-[#14213D]';
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log({ email, password });
+    login({ email, password });
   };
 
   return (
@@ -39,6 +40,10 @@ const Login = () => {
       </button>
     </form>
   );
+};
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
 };
 
 export default Login;

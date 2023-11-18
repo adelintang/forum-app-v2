@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
 
-const Register = () => {
+const Register = ({ register }) => {
   const [name, setName] = useInput('');
   const [email, setEmail] = useInput('');
   const [password, setPassword] = useInput('');
@@ -9,7 +10,7 @@ const Register = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log({ name, email, password });
+    register({ name, email, password });
   };
 
   return (
@@ -47,6 +48,10 @@ const Register = () => {
       </button>
     </form>
   );
+};
+
+Register.propTypes = {
+  register: PropTypes.func.isRequired,
 };
 
 export default Register;
