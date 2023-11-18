@@ -23,6 +23,7 @@
         "import/no-extraneous-dependencies": "off",
         "linebreak-style": "off",
         "no-use-before-define": "off",
-        "no-alert": "off"
+        "no-alert": "off",
+        "react/require-default-props": "off"
     }
 }
