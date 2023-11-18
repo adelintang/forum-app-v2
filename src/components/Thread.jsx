@@ -10,18 +10,20 @@ const Thread = ({ thread }) => {
   return (
     <div className="shadow-md rounded bg-white px-4 py-6">
       <span className="border border-solid border-[#888] p-1 rounded-md text-base">{`#${thread.category}`}</span>
-      <div className="flex flex-col gap-1.5 my-3">
+      <div className="flex flex-col gap-1.5 my-4">
         <Link to={`/thread/${thread.id}`}>
           <h3 className="text-lg font-semibold text-blue-900">{thread.title}</h3>
         </Link>
         <div className="text-base">{parser(thread.body)}</div>
       </div>
-      <div className="flex gap-x-3">
-        <p className="flex items-center gap-x-1.5">
-          {thread.totalComments}
-          <FaReply />
-        </p>
-        <p className="text-base text-[#888]">{postedAt(thread.createdAt)}</p>
+      <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-3">
+        <div className="flex gap-3">
+          <p className="flex items-center gap-x-1.5">
+            {thread.totalComments}
+            <FaReply />
+          </p>
+          <p className="text-base text-[#888]">{postedAt(thread.createdAt)}</p>
+        </div>
         <UserCreated avatar={thread.user.avatar} name={thread.user.name} createdText />
       </div>
     </div>
