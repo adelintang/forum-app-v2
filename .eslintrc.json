@@ -25,6 +25,7 @@
         "no-use-before-define": "off",
         "no-alert": "off",
         "react/require-default-props": "off",
-        "react/forbid-prop-types": "off"
+        "react/forbid-prop-types": "off",
+        "no-underscore-dangle": "off"
     }
 }
