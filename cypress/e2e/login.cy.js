@@ -7,7 +7,7 @@
  *   - should display homepage when email and password are correct
  */
 
-describe('template spec', () => {
+describe('Login spec', () => {
   beforeEach('passes', () => {
     cy.visit('http://localhost:5173/');
   });
